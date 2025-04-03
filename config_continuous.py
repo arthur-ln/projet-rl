@@ -1,4 +1,7 @@
 import pickle
+import gymnasium as gym
+import highway_env
+
 
 config_dict = {
     "observation": {
@@ -12,7 +15,6 @@ config_dict = {
             "vy",
             "cos_h",
             "sin_h",
-            "relative_heading",
         ],
         "features_range": {
             "x": [-100, 100],
@@ -57,6 +59,6 @@ with open("continuous_config.pkl", "wb") as f:
     pickle.dump(config_dict, f)
 
 # Pour utiliser cette configuration:
-# env = gym.make("highway-v0", render_mode="rgb_array")
-# env.unwrapped.configure(config_dict)
-# print(env.reset())
+env = gym.make("highway-v0", render_mode="rgb_array")
+env.unwrapped.configure(config_dict)
+print(env.reset())

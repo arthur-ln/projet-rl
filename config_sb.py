@@ -1,4 +1,8 @@
 import pickle
+import gymnasium as gym
+import highway_env
+from stable_baselines3 import PPO
+
 
 config_dict = {
     "observation": {
@@ -47,12 +51,6 @@ config_dict = {
 with open("stablebaselines_config.pkl", "wb") as f:
     pickle.dump(config_dict, f)
 
-# Pour utiliser cette configuration avec StableBaselines:
-# import gym
-# import highway_env
-# from stable_baselines3 import PPO
-#
-# env = gym.make("highway-v0", render_mode="rgb_array")
-# env.unwrapped.configure(config_dict)
-# model = PPO("MlpPolicy", env, verbose=1)
-# model.learn(total_timesteps=10000)
+env = gym.make("highway-v0", render_mode="rgb_array")
+env.unwrapped.configure(config_dict)
+print(env.reset())
