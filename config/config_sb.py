@@ -1,9 +1,3 @@
-import pickle
-import gymnasium as gym
-import highway_env
-from stable_baselines3 import PPO
-
-
 config_dict = {
     "observation": {
         "type": "TimeToCollision",
@@ -47,10 +41,3 @@ config_dict = {
     "offscreen_rendering": False,
     "disable_collision_checks": False,
 }
-
-with open("stablebaselines_config.pkl", "wb") as f:
-    pickle.dump(config_dict, f)
-
-env = gym.make("highway-v0", render_mode="rgb_array")
-env.unwrapped.configure(config_dict)
-print(env.reset())
