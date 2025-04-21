@@ -7,3 +7,41 @@
 __pycache__/
 
 highway*
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.nbconvert*
+*.ipynb_checkpoints/
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Environnements virtuels
+venv/
+env/
+
+# Cache de Jupyter
+.jupyter/
+.ipython/
+
+# Fichiers de configuration IPython
+profile_default/
+ipython_config.py
+
+# Fichiers de données et sauvegarde
+*.csv
+*.dat
+*.pickle
+*.h5
+
+# Fichiers spécifiques à l'IDE ou éditeur
+.vscode/
+.idea/
+
+# Fichiers spécifiques à MacOS
+.DS_Store
+
+# Fichiers spécifiques à Windows
+Thumbs.db
