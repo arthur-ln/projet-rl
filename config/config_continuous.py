@@ -1,7 +1,7 @@
 config_dict = {
     "action": {
         "lateral": True,
-        "longitudinal": True, # to True if acceleration wanted
+        "longitudinal": False, # to True if acceleration wanted
         'target_speeds': [0, 5, 10],
         "type": "ContinuousAction",
     },
